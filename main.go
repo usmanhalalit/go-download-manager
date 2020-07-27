@@ -1,8 +1,8 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-	"github.com/pkg/errors"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -21,7 +21,7 @@ type Download struct {
 func main() {
 	startTime := time.Now()
 	d := Download{
-		// Provide the URL tod download,
+		// Provide the URL to download,
 		//	example: https://www.dropbox.com/s/lgvhj/sample.mp4?dl=1
 		Url: "",
 		// Provide the target file path with extension, example: sample.mp4
